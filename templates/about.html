@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content%}
+<h1> About Page</h1>
+{{request.user}}
+<p> {{"this is template" | capfirst}}</p>
+<p>{{my_text}} , {{number}}</p>
+
+{{title | safe}}
+
+<ul>
+{% for my_sub_list in my_list%}
+    {% if my_sub_list == 345 %}
+        <li>{{forloop.counter}} - {{my_sub_list | add:22}}</li>
+        {% else%}
+        <li>{{forloop.counter}} - {{my_sub_list}}</li>
+       {% endif %}
+{% endfor %}
+</ul>
+
+{% endblock %}

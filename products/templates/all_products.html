@@ -1,0 +1,15 @@
+{% extends "base.html"%}
+
+
+{% block content %}
+
+{% for data in data_list%}
+<a href='{{data.get_absolute_url}}'>
+<h4>{{data.title}}</h4>
+</a>
+<p>{% if data.description %}{{data.description}} {% else%} Description coming soon {%endif%}</p>
+<p>{{data.price}}</p>
+
+{% endfor %}
+
+{% endblock %}
