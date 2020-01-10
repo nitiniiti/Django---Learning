@@ -17,11 +17,13 @@ from django.contrib import admin
 from django.urls import include, path
 
 from pages.views import home_view, about_view
-from products.views import product_detail_view, product_create_view, product_detail_view_with_id, all_product_detail_view
+from articles.views import fetch_authors
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_view, name='home'),
     path('about/', about_view),
-    path('products/', include('products.urls'))
+    path('products/', include('products.urls')),
+    path('articles/', include('articles.urls')),
+    path('authors/', fetch_authors, name="fetch_authors")
 ]

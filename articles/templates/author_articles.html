@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content%}
+<h1>Artiles of Author - {{author}}</h1>
+{% for article in articles %}
+<a href="/articles/{{article.id}}">
+<h2>{{article.title}}</h2>
+</a>
+<h3>{{article.description}}</h3>
+<h4>{{article.price}}</h4>
+{% endfor %}
+{% endblock%}

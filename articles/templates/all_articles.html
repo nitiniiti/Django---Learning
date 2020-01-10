@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for data in articles_list%}
+<a href="{{data.get_absolute_url}}">
+    <h4>{{data.title}}</h4>
+</a>    
+    <p>{{data.description}}</p>
+{% endfor%}
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content  %}
+
+<h2>All Authors</h2>
+
+{% for author in articles%}
+<a href="/articles/author/{{author}}">
+<p>{{author}}</p>
+</a>
+{% endfor %}
+
+{% endblock   %}%}

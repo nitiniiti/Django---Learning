@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>{{article.title}}</h1>
+<a href="/articles/author/{{article.author}}">
+<p>{{article.author}}</p>
+</a>
+<p>{{article.description}}</p>
+<p>{{article.price}}</p>
+
+<a href="/articles">All Articles</a>
+{% endblock %}
